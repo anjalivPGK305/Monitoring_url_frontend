@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <br>
+    <form class = "elem" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div>
+            <label for = "monitor_url"><b>Enter the URL :- </b></label>
+            <input type="text" id = "monitor_url" name = "monitor_url" ngModel placeholder = "Enter URL"/>
+        </div><br>
+        <div>
+            <label for = "timeout"><b>Enter the timelimit(in milliseconds) :-  </b></label>
+            <input type="text" id = "timeout" name = "timeout" ngModel placeholder = "Enter timelimit"/>
+        </div><br>
+        <div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div><br>
+    </form>
+    <div class="table-content">
+        <table>
+            <tr>
+                <th>URL</th>
+                <th>Timeout</th>
+                <th>Action</th>
+            </tr>
+        <tr *ngFor = "let url of urlLists">
+            <td>{{url.url}}</td>
+            <td>{{url.timeout}}</td>
+            <td><button type="submit" (click)="editUrl()">Edit</button>
+                <button type="submit" (click)="deleteUrl()">Delete</button>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+</body>
+</html>

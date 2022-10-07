@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class = "elem" #fo="ngForm" (ngSubmit)="onSubmit(fo)">
+        <label for = "name"><b>Enter your FullName :- </b></label>
+        <input type="text" id = "name" name = "name" ngModel placeholder = "Enter Name"/><br><br>
+        <label for = "email"><b>Enter the Username :- </b></label>
+        <input type="text" id = "email" name="email" ngModel placeholder = "Enter Username"/><br><br>
+        <label for = "password"><b>Enter the Password :-  </b></label>
+        <input type="text" id = "password" name="password" ngModel placeholder = "Enter password"/><br><br>
+        <button type="submit">Submit</button><br><br>
+    </form>
+</body>
+</html>
